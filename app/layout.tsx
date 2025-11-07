@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     description: "Discover what's possible with 3D printing",
 };
 
-export const montserrat = Montserrat_Alternates({
+const montserrat = Montserrat_Alternates({
     weight: "700",
     style: "normal",
     subsets: ["latin"],
@@ -16,7 +16,7 @@ export const montserrat = Montserrat_Alternates({
     variable: "--montserrat-alternates"
 });
 
-export const albertSans = Albert_Sans({
+const albertSans = Albert_Sans({
     weight: ["400", "500", "600", "700"],
     style: "normal",
     subsets: ["latin"],
