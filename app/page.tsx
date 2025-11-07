@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import heroImage from "@/public/hero-image.png";
 
 export default function HomePage() {
     return (
@@ -15,7 +16,7 @@ export default function HomePage() {
                     >Browse models</Link>
                 </div>
                 <Image
-                    src="/hero-image.png"
+                    src={heroImage}
                     alt="Hero image of PrintForge"
                     width={627}
                     height={627}

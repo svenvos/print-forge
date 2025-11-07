@@ -1,5 +1,8 @@
 import Image from "next/image";
 import AboutHighlight from "./AboutHighlight";
+import stack from "@/public/stack.png";
+import community from "@/public/community.png";
+import freeIcon from "@/public/free-icon.png";
 
 export default function AboutHighlightsSection() {
     return (
@@ -7,7 +10,7 @@ export default function AboutHighlightsSection() {
             <AboutHighlight>
                 <div className="flex gap-[0.375rem]">
                     <Image
-                        src="/stack.png"
+                        src={stack}
                         width={40}
                         height={32}
                         alt="Stack icon"
@@ -20,7 +23,7 @@ export default function AboutHighlightsSection() {
             <AboutHighlight>
                 <div className="flex gap-[0.375rem]">
                     <Image
-                        src="/community.png"
+                        src={community}
                         width={40}
                         height={32}
                         alt="Community icon"
@@ -33,7 +36,7 @@ export default function AboutHighlightsSection() {
             <AboutHighlight className="mb-5">
                 <div className="flex gap-[0.375rem]">
                     <Image
-                        src="/free-icon.png"
+                        src={freeIcon}
                         width={40}
                         height={32}
                         alt="Free to use icon"

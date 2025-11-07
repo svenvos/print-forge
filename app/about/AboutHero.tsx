@@ -1,10 +1,11 @@
 import Image from "next/image";
+import aboutImage from "@/public/about-image.png";
 
 export default function AboutHero() {
     return (
         <section className="flex flex-col gap-5 px-5 sm:px-10 sm:flex-row sm:gap-25 sm:items-center sm:justify-center">
             <Image
-                src="/about-image.png"
+                src={aboutImage}
                 width={627}
                 height={627}
                 alt="The about image"
