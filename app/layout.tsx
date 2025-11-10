@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat_Alternates, Albert_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "./Header";
+import Navbar from "./components/Navbar";
 
 export const metadata: Metadata = {
     title: "PrintForge",
@@ -23,11 +23,11 @@ const albertSans = Albert_Sans({
     display: "swap"
 });
 
-export default function RootLayout({children}: Readonly<{children: React.ReactNode}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en">
         <body className={`${albertSans.className} ${montserrat.variable}`}>
-            <Header />
+            <Navbar />
             {children}
         </body>
         </html>
