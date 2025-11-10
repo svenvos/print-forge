@@ -1,11 +1,17 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import NavLink from "./NavLink";
 import mobileLogo from "@/public/mobile-logo.svg";
 import desktopLogo from "@/public/desktop-logo.svg";
 
 export default function Navbar() {
+    const pathname = usePathname();
+
     return (
-        <header className="bg-white px-5 py-2 flex justify-between items-center sticky top-0 shadow z-9999">
+        <header className="bg-white px-5 py-2 flex justify-between items-center sticky top-0 shadow z-1">
             <Link href="/">
                 <Image
                     src={mobileLogo}
@@ -23,13 +29,9 @@ export default function Navbar() {
                 />
             </Link>
             <nav>
-                <ul className="flex items-center gap-5 text-gray-600">
-                    <li>
-                        <Link href="/3d-models" className="uppercase text-sm font-semibold tracking-wider">3D models</Link>
-                    </li>
-                    <li>
-                        <Link href="/about" className="uppercase text-sm font-semibold tracking-wider">About</Link>
-                    </li>
+                <ul className="flex items-center gap-5 text-gray-600 font-semibold">
+                    <NavLink href="/3d-models" isActive={pathname.includes("/3d-models")}>3D models</NavLink>
+                    <NavLink href="/about" isActive={pathname === "/about"}>About</NavLink>
                 </ul>
             </nav>
         </header>
