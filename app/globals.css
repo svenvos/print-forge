@@ -4,6 +4,10 @@
     --black-text: #1E1E1E;
 }
 
+@theme {
+   --color-gray-accent: #A1A1A1;
+}
+
 body {
     color: var(--black-text);
 }
