@@ -1,8 +1,20 @@
 import modelsData from "@/app/data/models.json";
 import { Model } from "../3d-models/page";
 
-export async function getAllModels() {
-    return modelsData;
+type GetModelsParams = {
+    category?: string
+};
+
+export async function getModels({ category }: GetModelsParams = {}): Promise<Model[]> {
+    let filteredModels = [...modelsData];
+
+    if (category) {
+      filteredModels = modelsData.filter(
+        (model: Model) => model.category === category
+      );
+    }
+
+    return filteredModels;
 }
 
 export async function getModelById(id: string | number): Promise<Model> {

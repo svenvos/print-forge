@@ -1,4 +1,4 @@
-import { getAllModels } from "@/app/lib/models";
+import { getModels } from "@/app/lib/models";
 import ModelsGrid from "../components/ModelsGrid";
 
 export type Model = {
@@ -12,7 +12,7 @@ export type Model = {
 };
 
 export default async function ModelsPage() {
-    const models: Model[] = await getAllModels();
+    const models: Model[] = await getModels();
 
     return (
         <ModelsGrid title="All 3D Models" models={models} />
