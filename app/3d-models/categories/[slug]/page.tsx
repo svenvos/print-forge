@@ -4,8 +4,8 @@ import ModelsGrid from "@/app/components/ModelsGrid";
 
 type CategoryPageProps = {
     params: Promise<{
-            slug: string
-        }>
+        slug: string
+    }>
 };
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
